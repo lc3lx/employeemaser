@@ -1,6 +1,7 @@
 
 const asynchandler = require("express-async-handler")
 const Order = require("../model/Order")
+const Recyclbin = require("../model/Recyclbin")
 
 const getthedata = asynchandler(async(req,res)=>{
     const ord = await Order.find()
@@ -40,7 +41,15 @@ const updatedata = asynchandler(async(req,res)=>{
 )
 const deletedata = asynchandler(async(req,res)=>{
     const order = await Order.findById(req.params.id)
+  
     if (order){
+           const recyclbin =  new Recyclbin({
+        customarname : order.customarname,
+            customarphone : order.customarphone,
+            locationCar :order.locationCar,
+            timeofserves:order.timeofserves,
+            local :order.local
+     })
         await Order.findByIdAndDelete(req.params.id)
         res.status(200).json("he is deleted")
     }else{
