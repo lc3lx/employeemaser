@@ -17,7 +17,7 @@ module.exports.registerUserCtrl = asyncHandler(async(req,res)=>{
     const  salt = await bcrypt.genSalt(10)
     const hasgedPassword = await bcrypt.hash(req.body.password,salt)
     user = new User({
-        name : req.body.name,
+        
         email:req.body.email,
         password: hasgedPassword
 
