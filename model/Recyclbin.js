@@ -29,7 +29,7 @@ const recyclbinschema = new mongoose.Schema(
 
     },
     local:{
-        type:Date,
+        type:String,
         required : true
     }
    }
