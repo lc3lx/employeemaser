@@ -4,8 +4,8 @@ const {getthedata,resrverdata,updatedata,deletedata} = require("../controller/or
 const { verifyToken } = require("../middlewere/aurthmiddlewere")
 
 
-router.post("/sendorder",verifyToken,resrverdata)
-router.get("/getorder",verifyToken,getthedata)
-router.put("/updataorder/:id",verifyToken,updatedata)
-router.delete("/deleteorder/:id",verifyToken,deletedata)
+router.post("/sendorder",resrverdata)
+router.get("/getorder",getthedata)
+router.put("/updataorder/:id",updatedata)
+router.delete("/deleteorder/:id",deletedata)
 module.exports = router
