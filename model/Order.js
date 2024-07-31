@@ -8,31 +8,33 @@ const orderschema = new mongoose.Schema(
         type:String ,
         minlength : 3,
         maxlength : 200,
-        required : true
+        required:true
      
     },
     customarphone :{
         type : String ,
         minlength:9,
         maxlength:14,
-        required : true
+        required:true
       
     },
     locationCar : {
         type: String,
-        required : true
+        required:true
        
         
     },
     timeofserves :{
         type:String ,
-        required : true
+        required:true
+
         
 
     },
     local:{
         type:String,
-        required : true
+        required:true
+
        
     }
 
