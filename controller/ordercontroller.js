@@ -50,6 +50,7 @@ const deletedata = asynchandler(async(req,res)=>{
             timeofserves:order.timeofserves,
             local :order.local
      })
+        await recyclbin.save()
         await Order.findByIdAndDelete(req.params.id)
         res.status(200).json("he is deleted")
     }else{
