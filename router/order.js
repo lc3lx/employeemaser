@@ -4,7 +4,7 @@ const {getthedata,resrverdata,updatedata,deletedata} = require("../controller/or
 const { verifyToken } = require("../middlewere/aurthmiddlewere")
 
 
-router.post("/sendorder",resrverdata)
+router.post("/postorder",resrverdata)
 router.get("/getorder",getthedata)
 router.put("/updataorder/:id",updatedata)
 router.delete("/deleteorder/:id",deletedata)
